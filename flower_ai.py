@@ -1,7 +1,13 @@
 import numpy as np 
+a=int(input("Quelle période vous plait le plus pour écouter de la musique, entre 0 et 10 ? 0 = avant les années 70', 2 = 70', 4 = 80', 6 = 90', 8 = 2000, 10 = actuelle"))
+b=int(input("Ecoutez-vous de la musique pour méditer, entre 0 et 10 ? 0 = oui pour dormir, 5 = yoga/médiation, 10 = pas du tout"))
+c=int(input("Ecoutez-vous de la musique pour faire la fête, entre 0 et 10 ? 0 = pas du tout je préfère la bibliothèque, 5 = soirée chill, 10 = GROSSE CAISSE"))
+d=int(input("Quel tempo vous préférez vous, entre 0 et 10 ? 0 = lent, 5 = moyen, 10 = rapide"))
+e=int(input("Quelle est votre humeur actuelle, entre 0 et 10 ? 0 = triste, 2 = rupture amoureuse, 4 = colère, 6 = appaisé/chill, 8 = de bonne humeur, 10 = JOIE EXTREME"))
+f=int(input("En quelle langue écoutez-vous votre musique, entre 0 et 10 ? 2 = pas de parole, 4 = français, 6 = anglais, 8 = espagnol, 10 = autres"))
 
-x_entrer = np.array(([3, 1.5], [2, 1], [4, 1.5], [3, 1], [3.5,0.5], [2,0.5], [5.5,1], [1,1], [4,1.5]), dtype=float) # données d'entrer
-y = np.array(([1], [0], [1],[0],[1],[0],[1],[0]), dtype=float) # données de sortie /  1 = rouge /  0 = bleu
+x_entrer = np.array(([0, 0, 0, 0, 0, 2], [0, 1, 1, 2, 5, 2], [0, 3, 3, 4, 6, 2], [0, 5, 4, 6, 8, 2], [2, 2, 2, 2, 0, 6], [4, 10, 10, 5, 10, 4], [0, 5, 5, 4, 8, 6], [6, 3, 4, 3, 3, 4], [4, 6, 4, 5, 3, 4], [6, 8, 5, 6, 7, 6], [8, 10, 6, 7, 8, 8], [10, 10, 7, 8, 9, 10], [8, 7, 6, 5, 2, 6],[10, 8, 7, 7, 5, 10],[8, 9, 8, 8, 8, 6],[10, 10, 10, 6, 10, 10],[6, 6, 6, 6, 0, 4],[8, 8, 8, 8, 5, 6],[10, 10, 9, 9, 8, 8],[10, 9, 10, 10, 10, 10],[4, 8, 6, 7, 6, 4],[6, 9, 8, 8, 8, 6],[8, 10, 9, 9, 9, 8],[10, 8, 10, 10, 10, 6]), dtype=float) # données d'entrer
+y = np.array(([0],[0],[0],[0],[0,2],[0,2],[0,2],[0,2],[0,4],[0,4],[0,4],[0,4],[0,6],[0,6],[0,6],[0,6],[0,8],[0,8],[0,8],[0,8],[1],[1],[1],[1]), dtype=float) # données de sortie /  1 = rouge /  0 = bleu
 
 # Changement de l'échelle de nos valeurs pour être entre 0 et 1
 x_entrer = x_entrer/np.amax(x_entrer, axis=0) # On divise chaque entré par la valeur max des entrées
